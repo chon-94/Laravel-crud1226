@@ -7,59 +7,18 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Muestra la lista de todos los productos
     public function index()
     {
-        //
+        $productos = Producto::all();// obtiene todos los productos de la base de datos
+        //podemos regularlarlo
+
+        return view('productos.index', compact('productos'));// te lleva a la vista de listado de productos
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
+    // Muestra el detalle de un producto específico
     public function show(Producto $producto)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Producto $producto)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Producto $producto)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Producto $producto)
-    {
-        //
+        return view('productos.show', compact('producto')); // te lleva a la vista de detalle del producto
     }
 }
