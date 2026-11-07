@@ -94,4 +94,3 @@ class ProductoController extends Controller
         //   pasando la variable $producto ya instanciada (un objeto).
     }
 }
-// ↑ Sin "?>" de cierre (correcto en PHP puro).

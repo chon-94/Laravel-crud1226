@@ -27,5 +27,3 @@ class Producto extends Model
         'imagen_url',  // string  → URL o ruta de la imagen
     ];
 }
-// ↑ Sin "?>" de cierre. En archivos PHP puros se omite (PSR-12)
-//   para evitar salidas accidentales que rompan cabeceras HTTP.
